@@ -1,0 +1,36 @@
+body {
+	background-color: white;
+}
+nav {
+	width:15%;
+	background: MediumTurquoise;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.90;
+	padding: 0;
+	text-align: center;
+}
+
+nav ul {
+	height:inherit;
+	padding:0;
+}
+
+nav ul li {
+	list-style: none;
+	color:white;
+	height:20%;
+	left:0;
+	cursor:pointer;
+}
+nav ul li:hover {
+	color:Red;
+	background-color: DarkCyan;
+
+}
+
+#Home {
+
+}
