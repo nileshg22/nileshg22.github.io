@@ -120,12 +120,12 @@ nav ul li:hover {
 }
 
 .bio-info {
-  width:40%;
+  width:500px;
   padding-top: 20px;
 }
 
 .bio-pic {
-  width: 70%;
+  width: 350px;
   height: 480px;
   margin-top: 30px;
   margin-left: 50px;
