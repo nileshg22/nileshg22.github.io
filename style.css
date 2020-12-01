@@ -78,7 +78,7 @@ nav ul li:hover {
 /* Project Section */
 
 .project-photo {
-  width: 75%;
+  width: 300px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
@@ -90,7 +90,7 @@ nav ul li:hover {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  width:40%;
+  width:550px;
   margin: auto;
   margin-bottom: 100px;
   border-radius: 25px;
