@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+       rel="stylesheet">
+    <title>Nilesh Gupta</title>
+  </head>
+  <body>
+    <nav id="top-nav" aria-labelledby="topmenu">
+      <a href="landing.html" id="logo">NILESH|GUPTA</a>
+      <ul>
+        <a href="landing.html#project-section"><li role="menuitem"><span>projects</span></li></a>
+        <a href="bio.html"><li><span>bio</span></li role="menuitem"></a>
+        <a href="NileshGuptaResume.pdf" target="_blank"><li role="menuitem"><span>resume</span></li></a>
+        <a href="contact.html"><li role="menuitem"><span>contact</span></li></a>
+      </ul>
+    </nav>
+    <h1 class="project-title">Canny Edge Detector</h1>
+    <h2 class="project-header">Problem:</h2>
+    <p class="project-description">I implemented the Canny edge detector, a technique created by
+      John Canny to detect a wide range of edges in an image. Canny edge
+      detection is very important in image processing because it is able
+      to detect edges while suppressing noise and can be tuned through parameters.
+    </p>
+    <h3 class="project-header">Method:</h3>
+    <p class="project-description">Canny edge detection is composed of five steps: Gaussian smoothing,
+      calculating the image gradient, suppressing non-maxima, finding two
+      thresholds, and edge linking.<br>The first step is image filtering and
+      involves creating a gaussian mask which is then convoluted with the grayscale image.<br>
+      I then compute the image gradient using the Sobel operators. I create the
+      convolution kernels G x and G x and apply them to the filtered image to
+      get an enhanced image consisting of the image gradients. I also use the edges
+      in an intermediate step to compute θ = tan −1(sobelY /sobelX) in order to
+      identify the direction. Next, I use the image gradient and theta values for
+      non-maxima suppression. In this method, I look for ridges and keep those
+      intensities while zeroing out intensities that do not belong to a ridge.
+      A ridge is identified by a pixel that has an intensity greater than its
+      two side pixels where its two side pixels are found using the value of θ.
+      I use an LUT in order to map the regions based on the value of θ.
+      Now, I use thresholding. I find the histogram of the image gradient resulting
+      from the non-maxima suppression and then compute the cumulative histogram.
+      I then factor in my parameter percentageOfNonEdge to find where I want to
+      threshold. I normalize the image gradients to [0,1] so that I can apply
+      a ratio which results in the computation of the high threshold.
+      The lower threshold is then defined by half of the high threshold.
+      Intensities higher than the high threshold are denoted as strong edges.
+      Intensities lower than the low threshold are denoted as non-edges and
+      suppressed to 0. Intensities between the low and high threshold are denoted
+      as weak edges.
+      Last I use edge linking to connect strong edges to weak edges if needed.
+      I iterate through every pixel and check to see if any of the neighbors are
+      strong pixels. If so, then the weak edge is preserved. Otherwise, it is removed.</p>
+    <h4 class="project-header">Results:</h4>
+    <p class="project-description">Below are the Canny edge detector steps applied to the Lena test image provided.
+      The first image, ​figure 1​, is a result of Gaussian Smoothing. We can see that
+      this is a blurred version of the original image. Next, we see ​figure 2​,
+      the result from computing the image gradients. Here we see that we have
+      extracted edges. Next, we use non-maxima suppression, resulting in ​figure 3​,
+      a sharper image. Then, double thresholding is used, resulting in
+      the weak edges being computes and the strong edges also being computed.
+      Last, edge linking is used to connect the strong and weak edges together if
+      needed, resulting in the final image displayed in ​figure 5.</p>
+    <div class="project-images" role="projectresults">
+      <img class = "project-img" src="lena_gray.jpg" alt="Grayscale"></img>
+      <img class = "project-img" src="GaussianSmoothing.jpg" alt="Gaussian Smoothed"></img>
+      <img class = "project-img" src="ImageGradientSobel.jpg" alt="Image Gradient"></img>
+      <img class = "project-img" src="NonmaximaSupress.jpg" alt="Nonmaxima surpressed"></img>
+      <img class = "project-img" src="CannySobel.jpg" alt="Final result"></img>
+    </div>
+  </body>
+</html>

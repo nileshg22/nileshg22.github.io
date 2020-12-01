@@ -1,123 +1,334 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,900');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-
+/* General body */
 body {
 	background-color: white;
 	font-family: 'Roboto Mono', monospace;
-
 }
+
+/* Top Nav */
+
+#logo {
+	font-size:30px;
+  text-align: left;
+}
+
+a {
+  color:black;
+  list-style: none;
+  text-decoration: none;
+  cursor:pointer;
+}
+
 nav {
 	background: transparent;
 	padding: 0;
-	z-index: 99;
-}
-#main_nav {
-	position: fixed;
-	width:200px;
-	height: 100%;
-	top: 0;
-	left: 0;
-	padding:40px 40px;
-	text-align: left;
 }
 
-#side_nav {
-	position: absolute;
+#top-nav {
 	width:100%;
-	text-align: right;
+  display: flex;
+  justify-content: space-between;
 }
 
-#side_nav ul a{
+#top-nav ul a{
 	display:inline-block;
-	margin: 5px;
-}
-#side_nav ul {
-	margin: 20px;
-}
-#logo {
-	font-size:1.7em;
-	font-weight:bold;
-}
-#logo span {
-	color: darkgray;
+	margin: 10px;
+  font-size: 20px;
 }
 
-
-#main_nav ul {
-	height:inherit;
-	padding:0;
-	margin-top: 35px;
+#top-nav ul {
+	margin: 0;
+  padding-left: 0;
+  text-align: right;
+  width: 60%;
 }
 
-#main_nav ul li, #main_nav a {
-	height:50px;
-	width:200px;
-	left:0;
-}
-nav ul li span {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
 nav a {
-	color:white;
+	color:black;
 	list-style: none;
 	text-decoration: none;
 	cursor:pointer;
-	text-decoration: none;
 }
+
 nav ul li:hover {
-	color:black;
+	text-decoration:underline;
 }
 
-embed {
-	opacity: 0;
-	position: absolute;
-	cursor:none;
-}
-.page {
-	position: relative;
-	height:350px;
-	width:100%;
-	background-color: #948390;
-	z-index: 1;	padding:100px 0px;
+/* Landing Page Greeting */
 
+.greeting-content {
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
 }
 
-.content {
-	margin-left: 300px;
+.greeting {
+  padding-top: 20px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-#home {
-	/* background: url(https://s-media-cache-ak0.pinimg.com/originals/0d/e7/f6/0de7f6f548d42ce594e8a91d9a7e8cb7.gif) no-repeat center center; */
-	background-image: url(pic.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	text-align: center;
+.text-greeting {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  font-weight: normal;
+  padding-bottom: 20px;
 }
-#home .content {
-	margin-top: 20px;
+
+/* Project Section */
+
+.project-photo {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  height: 400px;
 }
-#home h2{
-	font-family: 'Raleway', sans-serif;
-	color: white;
-	margin: 5px;
-	position: relative;
-	/* margin-left: 30%; */
-	font-size:2em;
-	font-weight: bold;
-	text-align:left;
+
+.project-card {
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width:40%;
+  margin: auto;
+  margin-bottom: 100px;
+  border-radius: 25px;
+  border: 2px solid darkgray;
+  box-shadow: 10px 10px 10px #888888;
+  transition: transform .25s;
+  cursor:pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
 }
 
 
-#about {
-	background-color: rgba(132,137,162, 1);
-	background-size: cover;
-	text-align: center;
+#project-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+  padding-top: 80px;
 }
 
-#wexp {
-	background-color: rgba(75, 89, 161, 1);
+/* Bio Page */
+.bio-body {
+  display:flex;
+  flex-direction:row;
+}
+
+.bio-info {
+  width:40%;
+  padding-top: 20px;
+}
+
+.bio-pic {
+  width: 70%;
+  height: 480px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.bio-text {
+  font-size: 12;
+  padding-left: 30px;
+  width: 100%;
+  line-height: 1.5;
+}
+
+/* Timeline */
+.timeline-info {
+  width:40%;
+  padding-left: 150px;
+}
+.timeline-text {
+  padding-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.timeline ul {
+  background: #ffffff;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #000;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute; /* pasted from Source: https://codepen.io/tutsplus/pen/QNeJgR linked in google doc*/
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 280px;
+  padding: 10px;
+  background: #DEDEDE;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute; /* pasted from Source: https://codepen.io/tutsplus/pen/QNeJgR linked in google doc*/
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #DEDEDE transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -330px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #DEDEDE;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Project Overview */
+
+.project-section-name {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 70px;
+	margin-bottom: 0;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.project-header {
+  font-size: 25px;
+  font-weight: bold;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.project-description {
+  font-size: 14px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.project-images {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.project-img {
+  padding-left: 2px;
+}
+
+/* Contact */
+
+.contact-body {
+  align-content: center;
+  text-align: center;
+}
+.contact-header {
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+}
+.contact-p {
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+}
+#contact-icon {
+  text-align: center;
+  font-size:50px;
+}
+
+/* Contact Form */
+
+.form-wrapper {
+  align-items: left;
+  justify-content: left;
+  text-align: center;
+  width:40%;
+  height: 480px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 25px;
+  border: 2px solid gray;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.form-body {
+  align-items: left;
+  padding-top: 10px;
+}
+
+.personal-info {
+  margin-top: 0px;
+}
+
+.reach-out-reason {
+  margin-top: 10px;
+}
+
+.location {
+  margin-top: 12px;
+}
+
+.comment-section {
+  margin-top: 10px;
+}
+
+label {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 1px;
+}
+
+.form-question {
+  font-weight: 600;
+}
+
+/* Placeholder contrast  */
+
+::-webkit-input-placeholder {
+	 color: #767676;
+	 opacity: 1;
 }

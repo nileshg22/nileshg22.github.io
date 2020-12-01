@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nilesh Gupta</title>
+  </head>
+  <body>
+    <nav id="top-nav" aria-labelledby="topmenu">
+      <a href="landing.html" id="logo">NILESH|GUPTA</a>
+      <ul>
+        <a href="landing.html#project-section"><li role="menuitem"><span>projects</span></li></a>
+        <a href="bio.html"><li role="menuitem"><span>bio</span></li></a>
+        <a href="NileshGuptaResume.pdf" target="_blank"><li role="menuitem"><span>resume</span></li></a>
+        <a href="contact.html" aria-current="page"><li role="menuitem"><span>contact</span></li></a>
+      </ul>
+    </nav>
+    <div class="contact-body" role="contactbody">
+      <h1 class='contact-header'>Contact me!</h1>
+      <p class='contact-p'>Feel free to reach out to me by clicking any of the mediums displayed below so we can connect</p>
+      <a href="https://www.github.com/nileshg22" target="_blank"><i class="fa fa-github" id="contact-icon"></i></a>
+      <a href="https://www.linkedin.com/in/nileshg22/" target="_blank"><i class="fa fa-linkedin-square" id="contact-icon"></i></a>
+      <a href="mailto:nileshgupta1642@gmail.com" target="_blank"><i class="fa fa-google" id="contact-icon"></i></a>
+      <p class='contact-p'>You can also fill out the form below!</p>
+      <!-- Contact Form -->
+      <div class="form-wrapper" role="contactform">
+        <form name="contact-form" class="form-body" onsubmit="return validateForm()">
+          <div class='personal-info'>
+            <label for="fname" class="form-question">What's your name?</label><br>
+            <input type="text" id="fname" name="fname" placeholder="John Doe"><br>
+            <label for="email" class="form-question">What's your email?</label><br>
+            <input type="text" id="email" name="email" placeholder="joe@example.com"><br>
+          </div>
+          <!-- Option Reason To Reach Out -->
+          <div class='reach-out-reason'>
+            <label for="reason" class="form-question">Why are you reaching out?</label><br>
+            <input type="radio" id="reason" name="reason" value="recruitment">
+            <label for="reason">recruit</label>
+            <input type="radio" id="reason" name="reason" value="connect">
+            <label for="reason">connect</label>
+            <input type="radio" id="reason" name="reason" value="other">
+            <label for="reason">other</label><br>
+          </div>
+          <!-- Option Based in Chicago -->
+          <div class='location'>
+            <label for="location" class="form-question">Are you located near Chicago?</label><br>
+            <input type="radio" id="location" name="location" value="Yes">
+            <label for="location">yes</label>
+            <input type="radio" id="location" name="location" value="No">
+            <label for="location">no</label><br>
+          </div>
+          <!-- Comment Box -->
+          <div class='comment-section'>
+            <label for="comments" class="form-question">Comments</label><br>
+            <textarea name="comments" rows="10" cols="30" placeholder="I love your website!"></textarea><br>
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="form-validation.js"></script>
+  </body>
+</html>

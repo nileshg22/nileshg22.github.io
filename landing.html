@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+       rel="stylesheet">
+    <title>Nilesh Gupta</title>
+  </head>
+  <body>
+    <nav id="top-nav" aria-labelledby="topmenu">
+      <a href="landing.html" id="logo" aria-current="page">NILESH|GUPTA</a>
+      <ul>
+        <a href="#project-section"><li role="menuitem"><span>projects</span></li></a>
+        <a href="bio.html"><li role="menuitem"><span>bio</span></li></a>
+        <a href="NileshGuptaResume.pdf" target="_blank"><li role="menuitem"><span>resume</span></li></a>
+        <a href="contact.html"><li role="menuitem"><span>contact</span></li role="menuitem"></a>
+      </ul>
+    </nav>
+    <!-- Source of gif: https://www.pinterest.com/pin/540713499007994116/ DECORATIVE GIF -->
+    <div class="greeting-content" role="landinggreeting">
+      <img src="hand_gesture.gif" alt=""</img>
+      <h1 class="greeting">HELLO</h1>
+      <h2 class="text-greeting">My name is Nilesh and I am a Master's student at Northwestern University</h2>
+      <a href="#project-section"><i class="material-icons">keyboard_arrow_down</i></a>
+    </div>
+    <h1 class="project-section-name">Projects</h1>
+    <section id="project-section" role="showprojects">
+      <div onclick="location.href='edge_project.html'" class="project-card" role="edgeproject">
+        <img class="project-photo" src="lena.png" alt="Canny Edge Detector Project Image"></img>
+        <h1>Canny Edge Detector</h1>
+        <p>Detect edges in image while surpressing noise</p>
+      </div>
+      <div class="project-card" role="aiproject">
+        <img class="project-photo" src="kart.png" alt="AI Kart Project Image"></img>
+        <h1>Inverse Reinforcement Learning</h1>
+        <p>Training an AI kart to complete a race track on its own</p>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scroll-down.js"></script>
+  </body>
+</html>
