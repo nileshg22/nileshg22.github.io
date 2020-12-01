@@ -1,4 +1,4 @@
-// Form validation 
+// Form validation
 function validateForm() {
   var name = document.forms["contact-form"]["fname"].value; // get name field
   var email = document.forms["contact-form"]["email"].value; // get email field
